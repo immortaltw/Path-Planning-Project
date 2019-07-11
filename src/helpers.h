@@ -154,4 +154,8 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s,
   return {x,y};
 }
 
+bool change_lane(double ns, double cs, int tolerance) {
+  return (ns < (cs - tolerance) || ns > (cs + tolerance));
+}
+
 #endif  // HELPERS_H
